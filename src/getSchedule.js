@@ -28,7 +28,7 @@ const getSchedule = (schedule) => {
   if (species.some((specie) => specie.name === schedule)) {
     return findSpecie(schedule);
   }
-  return 
+  return undefined;
 };
 
 module.exports = getSchedule;
