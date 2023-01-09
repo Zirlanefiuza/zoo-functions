@@ -28,8 +28,7 @@ const getSchedule = (schedule) => {
   if (species.some((specie) => specie.name === schedule)) {
     return findSpecie(schedule);
   }
-  return undefined;
+  return Object.keys(hours).map(week).reduce((acc, curr) => ({ ...acc, ...curr }), {});
 };
 
 module.exports = getSchedule;
-console.log(getSchedule(''));
